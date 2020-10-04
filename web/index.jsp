@@ -9,6 +9,7 @@
 <html>
     <%@include file="WEB-INF/head.jspf" %>
     <body>
+        <%@include file="WEB-INF/menu.jspf" %>
         <h1 class="text-center">Aluno</h1>
         
         <div class="row justify-content-center my-5">
