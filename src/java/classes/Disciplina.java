@@ -31,7 +31,7 @@ public class Disciplina {
     }
     
     // getters
-    public int getInt() {
+    public int getId() {
         return this.id;
     }
     public String getNome() {
