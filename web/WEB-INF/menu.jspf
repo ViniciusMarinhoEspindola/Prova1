@@ -1,4 +1,5 @@
 <%-- any content can be specified here e.g.: --%>
+<%@page import="Web.DBListener"%>
 <%@ page pageEncoding="UTF-8" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
   <a class="navbar-brand" href="#">Prova 1 - POO</a>
@@ -19,3 +20,9 @@
     </ul>
   </div>
 </nav>
+
+<%if(DBListener.exception != null) {%>
+    <div style="background-color: red; color: white; font-weight: bold; padding: 15px;border-radius:5px;">
+        Erro na criação da base: <%= DBListener.exception %>
+    </div>
+<% } %>

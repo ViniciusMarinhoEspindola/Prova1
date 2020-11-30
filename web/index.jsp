@@ -6,30 +6,8 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="classes.Disciplina"%>
+<%@page import="Web.DBListener"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%
-    if(Disciplina.getList() == null || Disciplina.getList().isEmpty()) {
-        Disciplina poo = new Disciplina("Programação Orientada a Objetos", "Ementa de POO", 4);
-        Disciplina eng = new Disciplina("Engenharia de Software", "Ementa de Eng", 4);
-        Disciplina so = new Disciplina("Sistemas Operacionais", "Ementa de SO", 4);
-        Disciplina lp = new Disciplina("Linguagem de Programação 4", "Ementa de LP4", 4);
-        Disciplina metodologia = new Disciplina("Metodologia", "Ementa de Metodologia", 4);
-        Disciplina bd = new Disciplina("Banco de Dados", "Ementa de BD", 4);
-        Disciplina si = new Disciplina("Segurança da Informação", "Ementa de SI", 5);
-        
-        ArrayList<Disciplina> matriculados = new ArrayList<Disciplina>(){{
-             add(poo);
-             add(eng);
-             add(so);
-             add(lp);
-             add(metodologia);
-             add(bd);
-             add(si);
-        }};
-        
-        Disciplina.setList(matriculados);
-    }
-%>
 <!DOCTYPE html>
 <html>
     <%@include file="WEB-INF/head.jspf" %>
